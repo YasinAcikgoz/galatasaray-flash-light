@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:contentDescription="@string/err_available"
+    android:contentDescription="@string/app_name"
     android:gravity="center_horizontal|center_vertical"
     android:padding="2dp"
     android:scaleType="centerInside"

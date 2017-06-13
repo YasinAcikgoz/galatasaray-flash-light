@@ -8,8 +8,8 @@
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
     <uses-feature android:name="android.hardware.camera.flash" android:required="true"/>
 
-    <application android:supportsRtl="true" android:label="@string/err_available" android:allowBackup="false">
-        <service android:name="com.yacikgoz.galatasarayflashlight.LightService" android:label="@string/err_available" android:icon="@drawable/on" android:permission="${applicationId}.FLASH" android:exported="false">
+    <application android:supportsRtl="true" android:label="@string/app_name" android:allowBackup="false">
+        <service android:name="com.yacikgoz.galatasarayflashlight.LightService" android:label="@string/app_name" android:icon="@drawable/on" android:permission="${applicationId}.FLASH" android:exported="false">
             <intent-filter>
                 <action android:name="${applicationId}.FLASH_ON"/>
                 <action android:name="${applicationId}.FLASH_OFF"/>

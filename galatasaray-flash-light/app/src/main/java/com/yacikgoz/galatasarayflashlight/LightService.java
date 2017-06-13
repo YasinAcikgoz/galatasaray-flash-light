@@ -49,7 +49,7 @@ public class LightService extends Service {
                     updateWidgets(this, true);
                     return START_STICKY;
                 } catch (Exception ex) {
-                    Toast.makeText(this, R.string.err_available, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.app_name, Toast.LENGTH_SHORT).show();
                     if (BuildConfig.DEBUG) {
                         Log.v("LightService", "exception " + ex.getMessage());
                     }
@@ -62,9 +62,16 @@ public class LightService extends Service {
     }
     static RemoteViews getRemoteViews(String packageName, boolean flashState, PendingIntent pendingIntent) {
         final RemoteViews remoteViews = new RemoteViews(packageName, R.layout.widget_layout);
-        final int imageResource = flashState ? R.drawable.on : R.drawable.off;
+        int imageResource;
+
+        if(flashState)
+            imageResource = R.drawable.on;
+        else
+            imageResource = R.drawable.off;
+
         remoteViews.setImageViewResource(R.id.update, imageResource);
         remoteViews.setOnClickPendingIntent(R.id.update, pendingIntent);
+
         return remoteViews;
     }
 
