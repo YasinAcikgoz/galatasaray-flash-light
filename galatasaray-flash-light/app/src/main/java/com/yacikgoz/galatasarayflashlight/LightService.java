@@ -47,6 +47,8 @@ public class LightService extends Service {
                 try {
                     startCamera();
                     updateWidgets(this, true);
+                    Toast.makeText(getApplicationContext(), "Galatasaray da karanlıktan kurtulsun", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Dursun Özbek İstifa!", Toast.LENGTH_SHORT).show();
                     return START_STICKY;
                 } catch (Exception ex) {
                     Toast.makeText(this, R.string.app_name, Toast.LENGTH_SHORT).show();
